@@ -1,7 +1,7 @@
 # Dockerfile - Production-ready for Spring Boot with pre-built JAR
 # Assumes JAR is already built by Jenkins and contains frontend assets
 
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre
 
 # Create a non-root user for security
 RUN groupadd -r spring -g 1000 && \
