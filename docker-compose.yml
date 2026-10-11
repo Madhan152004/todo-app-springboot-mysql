@@ -1,4 +1,4 @@
-```yaml
+
 services:
   mysql:
     image: mysql:8.0
@@ -28,7 +28,7 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - "8080:8080"
+      - "9090:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DB:?MYSQL_DB is required}
       SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:?MYSQL_USER is required}
