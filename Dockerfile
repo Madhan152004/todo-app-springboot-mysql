@@ -4,8 +4,8 @@
 FROM eclipse-temurin:17-jre
 
 # Create a non-root user for security
-RUN groupadd -r spring -g 1000 && \
-    useradd -r -g spring -u 1000 -m -s /bin/bash spring
+RUN groupadd --system spring \
+    && useradd --system --gid spring --create-home spring
 
 # Set working directory
 WORKDIR /app
